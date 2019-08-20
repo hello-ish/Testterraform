@@ -1,7 +1,9 @@
 resource "aws_s3_bucket" "testbucket" {
-  bucket = "my-tf-test-bucket"
+  bucket = "my-tf-testishwar-bucket"
   acl    = "private"
-  versioning_enabled = "true"
+  versioning {
+        enabled = true
+  }
 
   tags = {
     Name        = "My bucket"
